@@ -1,0 +1,30 @@
+@mixin desktop-view ($width, $height: unset, $font-size:unset) {
+  @media (min-width: 1440px) {
+    width: $width;
+    height: $height;
+    font-size: $font-size;
+  }
+}
+
+@mixin button($bg-color, $br-color, $fn-color, $width, $height, $center) {
+  background-color: $bg-color;
+  border: none;
+  border: 2px solid $br-color;
+  color: $fn-color;
+  border-radius: 50px;
+  width: $width;
+  height: $height;
+  display: block;
+  @if $center == true{
+    margin: 0 auto 40px;
+  }
+}
+@mixin button-hover($bg-color,$fn-color:black){
+  &:hover{
+    cursor: pointer;
+    background-color: $bg-color;
+    color: $fn-color;
+
+  }
+
+}
